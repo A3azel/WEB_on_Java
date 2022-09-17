@@ -8,8 +8,8 @@ import java.util.regex.Pattern;
 
 public class OnlyOneThread {
 
-    private static final String DIRECTORY_PATH = "DIRECTORY_PATH";
-    private static final String RESULT_FILE_PATH = "RESULT_FILE_PATH";
+    private static final String DIRECTORY_PATH = "C:\\Users\\Lenovo\\OneDrive\\Рабочий стол\\Всі лаби\\3 курс\\Java Web\\Lab1\\TestLab";
+    private static final String RESULT_FILE_PATH = "C:\\Users\\Lenovo\\OneDrive\\Рабочий стол\\Всі лаби\\3 курс\\Java Web\\Lab1\\Lab1_Results.txt";
 
     public static void getResultFile(){
         File resultFile = new File(RESULT_FILE_PATH);
