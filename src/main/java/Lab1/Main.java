@@ -18,11 +18,14 @@ public class Main {
                 e.printStackTrace();
             }
         }
-        Scanner sc = new Scanner(System.in);
+
+        //Runnable
+
+        /*Scanner sc = new Scanner(System.in);
         System.out.print("Enter directory -> ");
         String dir = sc.nextLine();
         //ExecutorService pool = Executors.newCachedThreadPool();
-        ThreadPoolExecutor pool = new ThreadPoolExecutor(5, 10, 30L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
+        ThreadPoolExecutor pool = new ThreadPoolExecutor(1, 10, 30L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
         FileParser fileParser = new FileParser(dir, pool, RESULT_FILE_PATH);
         pool.execute(fileParser);
         while (pool.getActiveCount()!=0){
@@ -32,12 +35,23 @@ public class Main {
                 e.printStackTrace();
             }
         }
-        /*try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
         pool.shutdown();
-        fileParser.printFileDate();
+        fileParser.printFileDate();*/
+
+        //Callable
+
+        /*Scanner sc = new Scanner(System.in);
+        System.out.print("Enter directory -> ");
+        String dir = sc.nextLine();
+        ExecutorService pool = Executors.newCachedThreadPool();
+        UsingCallable fileParser = new UsingCallable(dir, pool, RESULT_FILE_PATH);
+        Future<Void> result = (Future<Void>) pool.submit(fileParser);
+        try {
+            result.get();
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+        pool.shutdown();
+        fileParser.printFileDate();*/
     }
 }
