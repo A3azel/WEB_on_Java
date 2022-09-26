@@ -26,7 +26,6 @@ public class OnlyOneThread {
             return;
         }
         parsDirectory(file,resultFile);
-
     }
 
     public static void parsDirectory(File file,File resultFile){
@@ -71,18 +70,5 @@ public class OnlyOneThread {
             countOfNumber++;
         }
         return countOfNumber;
-    }
-
-    public void printFileDate(){
-        FileReader fileReader = null;
-        try {
-            fileReader = new FileReader(RESULT_FILE_PATH);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        Scanner sc = new Scanner(fileReader);
-        while (sc.hasNextLine()){
-            System.out.println(sc.nextLine());
-        }
     }
 }

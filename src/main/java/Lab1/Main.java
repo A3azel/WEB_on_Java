@@ -24,9 +24,8 @@ public class Main {
         /*Scanner sc = new Scanner(System.in);
         System.out.print("Enter directory -> ");
         String dir = sc.nextLine();
-        //ExecutorService pool = Executors.newCachedThreadPool();
         ThreadPoolExecutor pool = new ThreadPoolExecutor(1, 10, 30L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
-        FileParser fileParser = new FileParser(dir, pool, RESULT_FILE_PATH);
+        UsingRunnable fileParser = new UsingRunnable(dir, pool, RESULT_FILE_PATH);
         pool.execute(fileParser);
         while (pool.getActiveCount()!=0){
             try {
@@ -36,11 +35,11 @@ public class Main {
             }
         }
         pool.shutdown();
-        fileParser.printFileDate();*/
+        HelpedMethods.printFileDate(RESULT_FILE_PATH);*/
 
         //Callable
 
-        /*Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter directory -> ");
         String dir = sc.nextLine();
         ExecutorService pool = Executors.newCachedThreadPool();
@@ -52,6 +51,6 @@ public class Main {
             e.printStackTrace();
         }
         pool.shutdown();
-        fileParser.printFileDate();*/
+        HelpedMethods.printFileDate(RESULT_FILE_PATH);
     }
 }
